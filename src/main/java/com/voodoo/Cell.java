@@ -7,7 +7,7 @@ import java.util.List;
 import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 /**
- * voodoo
+ * Represente la vie
  *
  */
 public class Cell extends JPanel {
