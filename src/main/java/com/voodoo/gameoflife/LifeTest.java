@@ -1,4 +1,4 @@
-package com.voodoo;
+package com.voodoo.gameoflife;
 
 
 import javax.swing.JFrame;

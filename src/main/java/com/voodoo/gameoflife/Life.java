@@ -1,4 +1,4 @@
-package com.voodoo;
+package com.voodoo.gameoflife;
 
 import java.awt.BorderLayout;
 import java.awt.Container;

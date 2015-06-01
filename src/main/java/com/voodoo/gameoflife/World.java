@@ -1,4 +1,4 @@
-package com.voodoo;
+package com.voodoo.gameoflife;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.MouseAdapter;

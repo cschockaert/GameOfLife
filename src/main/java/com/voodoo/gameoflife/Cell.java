@@ -1,4 +1,4 @@
-package com.voodoo;
+package com.voodoo.gameoflife;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ public class Cell extends JPanel {
 		setBorder(new LineBorder(Color.BLACK, 1));
 		this.row = row;
 		this.col = col;
-		setToolTipText("test");
+		setToolTipText("");
 	}
 	
 	
@@ -42,8 +42,12 @@ public class Cell extends JPanel {
 	}
 
 
+	public boolean isNeighbor(Cell cell) {
+		return (cell != this && Math.abs(cell.getRow() - row) <= 1 && Math.abs(cell.getCol() - col) <=1 );
+	}
+		
 	public void addNeightBorIfNeeded(Cell cell) {
-		if (cell != this && Math.abs(cell.getRow() - row) <= 1 && Math.abs(cell.getCol() - col) <=1 ) {
+		if (isNeighbor(cell)) {
 			this.neightbor.add(cell);
 		}
 	}
@@ -64,7 +68,7 @@ public class Cell extends JPanel {
 
 
 
-	public int getNcount() {
+	public int getNeighborAliveCount() {
 		int ncount = 0;
 		for (Cell cell : neightbor) {
 			if (cell.isAlive()) {
@@ -86,7 +90,7 @@ public class Cell extends JPanel {
 	
 	@Override
 	public String getToolTipText(MouseEvent event) {
-		return String.valueOf(getNcount());
+		return String.valueOf(getNeighborAliveCount());
 	}
 
 

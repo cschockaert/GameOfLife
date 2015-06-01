@@ -1,7 +1,10 @@
-package com.voodoo;
+package com.voodoo.gameoflife;
 
-public class God {
-
+/**
+ * représente dieu
+ * 
+ */
+public class God { 
 	private World world;
 
 	public God(World world) {
@@ -23,16 +26,16 @@ public class God {
 		for(row=1; row<world.cells.length-1; row++){				//loops through the board and applies rules of the game
 			for(col=1; col< world.cells[row].length-1; col++){
 				if(world.cells[row][col].isAlive()){
-					if (world.cells[row][col].getNcount() < 2){				//if its alive and has less then 2 alive neighbors
+					if (world.cells[row][col].getNeighborAliveCount() < 2){				//if its alive and has less then 2 alive neighbors
 						world.cells[row][col].die();
 					}
 
-					if (world.cells[row][col].getNcount() > 3){				//if its alive and has more than 3 neighbors
+					if (world.cells[row][col].getNeighborAliveCount() > 3){				//if its alive and has more than 3 neighbors
 						world.cells[row][col].die();
 					}
 				}
 				else {		
-					if (world.cells[row][col].getNcount() == 3){				//if its dead and has exactly 3 neighbors
+					if (world.cells[row][col].getNeighborAliveCount() == 3){				//if its dead and has exactly 3 neighbors
 						world.cells[row][col].live();
 					}
 				}
