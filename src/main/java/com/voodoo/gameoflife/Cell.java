@@ -19,6 +19,8 @@ public class Cell extends JPanel {
 
 	private boolean alive = false;
 	
+	private boolean nextAliveState = false;
+	
 	private List<Cell> neightbor = new ArrayList<Cell>();
 
 	private int row;
@@ -43,10 +45,13 @@ public class Cell extends JPanel {
 
 
 	public boolean isNeighbor(Cell cell) {
-		return false;
+		return Math.abs(row - cell.getRow()) <= 1 && Math.abs(col - cell.getCol()) <= 1;
 	}
 		
 	public void addNeightBorIfNeeded(Cell cell) {
+		if (cell != this && isNeighbor(cell)) {
+			this.neightbor.add(cell);
+		}
 	}
 
 	public void die() {
@@ -66,9 +71,31 @@ public class Cell extends JPanel {
 
 
 	public int getNeighborAliveCount() {
-		return 0;
+		int ncount = 0;
+		for (Cell cell : neightbor ) {
+			if (cell.isAlive()) {
+				ncount++;
+			}
+		}
+		return ncount;
+	}
+	
+	
+
+
+	public boolean isNextAliveState() {
+		return nextAliveState;
 	}
 
+
+	public void setNextAliveState(boolean nextAliveState) {
+		this.nextAliveState = nextAliveState;
+	}
+
+	public void applyNextState() {
+		this.alive = nextAliveState;
+		this.repaint();
+	}
 
 	@Override
 	public Color getBackground() {

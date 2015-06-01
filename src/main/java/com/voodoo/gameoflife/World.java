@@ -10,9 +10,9 @@ import javax.swing.JPanel;
 
 public class World extends JPanel {
 
-	public static final int WORLD_Y = 30;
+	public static final int WORLD_Y = 50;
 
-	public static final int WORLD_X = 20;
+	public static final int WORLD_X = 40;
 
 	/**
 	 * 
