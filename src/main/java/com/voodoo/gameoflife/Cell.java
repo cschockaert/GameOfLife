@@ -43,13 +43,10 @@ public class Cell extends JPanel {
 
 
 	public boolean isNeighbor(Cell cell) {
-		return (cell != this && Math.abs(cell.getRow() - row) <= 1 && Math.abs(cell.getCol() - col) <=1 );
+		return false;
 	}
 		
 	public void addNeightBorIfNeeded(Cell cell) {
-		if (isNeighbor(cell)) {
-			this.neightbor.add(cell);
-		}
 	}
 
 	public void die() {
@@ -69,13 +66,7 @@ public class Cell extends JPanel {
 
 
 	public int getNeighborAliveCount() {
-		int ncount = 0;
-		for (Cell cell : neightbor) {
-			if (cell.isAlive()) {
-				ncount++;
-			}
-		}
-		return ncount;
+		return 0;
 	}
 
 

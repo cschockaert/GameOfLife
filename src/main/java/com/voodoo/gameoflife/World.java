@@ -19,7 +19,7 @@ public class World extends JPanel {
 	 */
 	private static final long serialVersionUID = 2157970275395308036L;
 
-	private Cell[][] cells;
+	private Cell[][] cellGrid;
 	private List<Cell> cellList = new ArrayList<Cell>();
 	
 	public World() {
@@ -27,14 +27,14 @@ public class World extends JPanel {
 		setLayout(new GridLayout(WORLD_X,WORLD_Y));	
 		setBackground(Color.WHITE);
 
-		cells = new Cell[WORLD_X][WORLD_Y];
+		cellGrid = new Cell[WORLD_X][WORLD_Y];
 		int row;
 		int col;
 
-		for (row = 0; row < cells.length; row++) {
-			for (col = 0; col < cells[row].length; col++) {
+		for (row = 0; row < cellGrid.length; row++) {
+			for (col = 0; col < cellGrid[row].length; col++) {
 				Cell cell = new Cell(row, col);
-				cells[row][col] = cell; // create cell
+				cellGrid[row][col] = cell; // create cell
 				this.add(cell);
 				cell.addMouseListener(handler);
 				cell.addMouseMotionListener(handler);
@@ -42,10 +42,10 @@ public class World extends JPanel {
 			}
 		}
 		//ajout des voisins
-		for (row = 0; row < cells.length; row++) {
-			for (col = 0; col < cells[row].length; col++) {
+		for (row = 0; row < cellGrid.length; row++) {
+			for (col = 0; col < cellGrid[row].length; col++) {
 				for (Cell cell : cellList) {
-					cells[row][col].addNeightBorIfNeeded(cell);
+					cellGrid[row][col].addNeightBorIfNeeded(cell);
 				}
 			}
 		}

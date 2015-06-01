@@ -15,5 +15,20 @@ public class GodTest {
 	public void testGenerateNextGeneration() {
 		fail("Not yet implemented");
 	}
+	
+	@Test
+	public void testExecuteRule1() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testExecuteRule2() {
+		fail("Not yet implemented");
+	}
+	
+	@Test
+	public void testExecuteRule3() {
+		fail("Not yet implemented");
+	}
 
 }
