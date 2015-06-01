@@ -1,7 +1,10 @@
 package com.voodoo;
 
-public class God {
-
+/**
+ * représente dieu
+ * 
+ */
+public class God { 
 	private World world;
 
 	public God(World world) {
