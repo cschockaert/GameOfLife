@@ -10,16 +10,16 @@ import javax.swing.JPanel;
 
 public class World extends JPanel {
 
-	private static final int WORLD_Y = 30;
+	public static final int WORLD_Y = 30;
 
-	private static final int WORLD_X = 20;
+	public static final int WORLD_X = 20;
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 2157970275395308036L;
 
-	public Cell[][] cells;
+	private Cell[][] cells;
 	private List<Cell> cellList = new ArrayList<Cell>();
 	
 	public World() {
