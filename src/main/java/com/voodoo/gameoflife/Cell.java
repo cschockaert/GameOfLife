@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
 /**
- * branch1 comment4
+ * branch1 comment5
  */
 public class Cell extends JPanel {
 
@@ -20,6 +20,8 @@ public class Cell extends JPanel {
 	private boolean alive = false;
 	
 	private boolean nextAliveState = false;
+
+    private boolean thisIsBranch5Bool;
 	
 	private List<Cell> neightbor = new ArrayList<Cell>();
 
