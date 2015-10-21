@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
 /**
- * Cell master comment
+ * branch1 comment5
  */
 public class Cell extends JPanel {
 
@@ -18,10 +18,10 @@ public class Cell extends JPanel {
 	private static final long serialVersionUID = 9150145006502273739L;
 
 	private boolean alive = false;
-
-    private boolean thisIsMasterChange = false;
-
+	
 	private boolean nextAliveState = false;
+
+    private boolean thisIsBranch5Bool;
 	
 	private List<Cell> neightbor = new ArrayList<Cell>();
 
