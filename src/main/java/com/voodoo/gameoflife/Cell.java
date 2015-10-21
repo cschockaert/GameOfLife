@@ -18,7 +18,9 @@ public class Cell extends JPanel {
 	private static final long serialVersionUID = 9150145006502273739L;
 
 	private boolean alive = false;
-	
+
+    private boolean thisIsMasterChange = false;
+
 	private boolean nextAliveState = false;
 	
 	private List<Cell> neightbor = new ArrayList<Cell>();
