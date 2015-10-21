@@ -22,7 +22,9 @@ public class Cell extends JPanel {
 	private boolean nextAliveState = false;
 
     private boolean thisIsBranch5Bool;
-	
+
+    private boolean work2;
+
 	private List<Cell> neightbor = new ArrayList<Cell>();
 
 	private int row;
