@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.LineBorder;
 
 /**
- * branch1 comment5
+ * master comment
  */
 public class Cell extends JPanel {
 
